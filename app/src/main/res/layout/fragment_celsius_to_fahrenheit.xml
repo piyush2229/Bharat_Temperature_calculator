@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/LightGrey">
+
+        <!-- "Temperature Converter" TextView -->
+
+        <!-- "Enter Celsius" TextView -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="412dp"
+            android:layout_height="57dp"
+            android:background="#808080"
+            android:text="Temperature Converter"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/input_temp_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/LightBlue"
+            android:text="Enter Celsius:"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            android:layout_marginTop="16dp" />
+
+        <!-- Input EditText -->
+        <EditText
+            android:id="@+id/input_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_temp_label"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- "Convert" Button -->
+        <Button
+            android:id="@+id/convert_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/Blue"
+            android:text="Convert"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_temp"
+            tools:ignore="TextContrastCheck" />
+
+        <!-- "Result in Fahrenheit" TextView -->
+        <TextView
+            android:id="@+id/output_temp_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/LightBlue"
+            android:text="Result in Fahrenheit:"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/convert_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- Output TextView -->
+        <TextView
+            android:id="@+id/output_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/LightGrey"
+            android:text="32 °F"
+            android:textAlignment="center"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/output_temp_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Switch Button -->
+
+</LinearLayout>
